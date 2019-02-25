@@ -11,6 +11,7 @@ namespace cSharpDemo
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+            Console.WriteLine("Testing Github now");
         }
     }
 }

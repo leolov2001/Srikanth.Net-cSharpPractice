@@ -11,8 +11,7 @@ namespace cSharpDemo
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-            Console.WriteLine("Testing Github now");
-            Console.WriteLine("Testing Sushma Github now");
+            //removed the last 2 github test edits.
         }
     }
 }

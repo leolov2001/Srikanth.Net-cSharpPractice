@@ -33,8 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>
-    </StartupObject>
+    <StartupObject>cSharpDemo.NoOfDays</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -50,6 +49,7 @@
     <Compile Include="ArrayDemo.cs" />
     <Compile Include="EvenNumbers.cs" />
     <Compile Include="LeapYear.cs" />
+    <Compile Include="NoOfDays.cs" />
     <Compile Include="Numbers.cs" />
     <Compile Include="Program.cs" />
   </ItemGroup>

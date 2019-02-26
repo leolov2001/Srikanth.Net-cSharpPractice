@@ -8,6 +8,16 @@ namespace cSharpDemo
 {
     class NoOfDays
     {
+        static bool IsLeap(int y)
+        {
+            if (y % 4 == 0 && y % 100 != 0 || y % 100 == 0)
+            {
+                return true;
+            }
+            else
+                return false;
+        }
+
         static void Main(string[] args)
         {
             int year, month;
@@ -18,9 +28,8 @@ namespace cSharpDemo
 
             switch (month)
             {
-                case 02:
-                case 2:
-                    if (isLeap(year))
+                 case 2:
+                    if (IsLeap(year))
                     {
                         Console.WriteLine("The No. of Days in the month is 29");
                     }

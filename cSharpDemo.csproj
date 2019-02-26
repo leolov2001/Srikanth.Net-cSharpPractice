@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>cSharpDemo.PrimeNumber</StartupObject>
+    <StartupObject>cSharpDemo.ReverseNumber</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -53,6 +53,7 @@
     <Compile Include="Numbers.cs" />
     <Compile Include="PrimeNumber.cs" />
     <Compile Include="Program.cs" />
+    <Compile Include="ReverseNumber.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

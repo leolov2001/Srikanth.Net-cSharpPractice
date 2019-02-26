@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>cSharpDemo.NoOfDays</StartupObject>
+    <StartupObject>cSharpDemo.PrimeNumber</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -51,6 +51,7 @@
     <Compile Include="LeapYear.cs" />
     <Compile Include="NoOfDays.cs" />
     <Compile Include="Numbers.cs" />
+    <Compile Include="PrimeNumber.cs" />
     <Compile Include="Program.cs" />
   </ItemGroup>
   <ItemGroup>

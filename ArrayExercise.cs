@@ -31,8 +31,7 @@ namespace cSharpDemo
                     max -= 1;
                 }
             }
-
-            for(int i = 0; i < 10; i++)
+            for (int i = 0; i < 10; i++)
             {
                 if (i == 0)
                 {
@@ -45,11 +44,27 @@ namespace cSharpDemo
                         Console.WriteLine("{0}]", a[i]);
                     }
                     else
+
                     {
                         Console.Write("{0},", a[i]);
                     }
                 }
             }
+
+            Console.WriteLine(); Console.WriteLine(); Console.WriteLine(); Console.WriteLine();
+
+            Console.WriteLine("Lets do exercise 4.2 - Factorial of a given #");
+
+            Console.Write("Please enter a number: ");
+            int num2 = Int32.Parse(Console.ReadLine());
+            int fact = 1;
+            for (int i = 2; i <= num2; i++)
+            {
+                fact = fact * i;
+            }
+            Console.WriteLine(); Console.WriteLine();
+            Console.WriteLine("Factorial of {0} is {1}.",num2,fact);
+
         }
     }
 }

@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>cSharpDemo.ArrayDemo</StartupObject>
+    <StartupObject>cSharpDemo.ArrayExercise</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ArrayDemo.cs" />
+    <Compile Include="ArrayExercise.cs" />
     <Compile Include="EvenNumbers.cs" />
     <Compile Include="LeapYear.cs" />
     <Compile Include="NoOfDays.cs" />

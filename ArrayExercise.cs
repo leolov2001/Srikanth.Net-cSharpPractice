@@ -8,6 +8,32 @@ namespace cSharpDemo
 {
     class ArrayExercise
     {
+        static void Fill(int[] arr, int num = 1, int l = 10)
+        {
+            for(int i = 0; i < l; i++)
+            {
+                arr[i] = num;
+            }
+
+            for (int i = 0; i < 10; i++)
+            {
+                 if (i == 0)
+                    {
+                        Console.Write("[{0},", arr[i]);
+                    }
+                 else
+                 {
+                    if (i == 9)
+                        {
+                            Console.WriteLine("{0}]", arr[i]);
+                        }
+                    else
+                        {
+                            Console.Write("{0},", arr[i]);
+                        }
+                 }
+            }
+        }
         static void Main(string[] args)
         {
             //int[] n = new int[10];
@@ -73,7 +99,16 @@ namespace cSharpDemo
             Console.WriteLine("Lets do exercise 4.4 - Fill Function");
             Console.WriteLine(); Console.WriteLine();
 
-
+            int[] a = new int[10];
+            Console.Write("Enter a number that you would like to fill the array");
+            int n1 = Int32.Parse(Console.ReadLine());
+            Console.WriteLine(); Console.WriteLine();
+            Fill(a, n1);
+            Console.WriteLine(); Console.WriteLine();
+            Fill(a);
+            Console.WriteLine(); Console.WriteLine();
+            Fill(a, n1, 5);
+            Console.WriteLine(); Console.WriteLine();
         }
     }
 }

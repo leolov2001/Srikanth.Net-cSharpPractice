@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>cSharpDemo.ArrayExercise</StartupObject>
+    <StartupObject>cSharpDemo.Student</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="ArrayDemo.cs" />
     <Compile Include="ArrayExercise.cs" />
+    <Compile Include="CommandLineArgs.cs" />
     <Compile Include="EvenNumbers.cs" />
     <Compile Include="LeapYear.cs" />
     <Compile Include="NoOfDays.cs" />
@@ -55,6 +56,7 @@
     <Compile Include="PrimeNumber.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="ReverseNumber.cs" />
+    <Compile Include="Student.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

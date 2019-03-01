@@ -8,7 +8,7 @@ namespace cSharpDemo
 {
     class Student
     {
-        private int roll; private string name, course;
+        private int roll, totalFee, feePaid = 0; private string name, course;
 
         public Student(int roll, string name)
         {
@@ -23,27 +23,51 @@ namespace cSharpDemo
             this.course = course;
         }
 
+        public string Payment(int feePaid)
+        {
+            string message;
+            if (feePaid + this.feePaid > this.totalFee)
+            {
+                message = "Cannot accept the fee as it will make the total fee paid greater than the course fee.";
+                return message;
+            }
+            else
+            {
+                this.feePaid = feePaid + this.feePaid;
+                if (this.totalFee - this.feePaid == 0)
+                {
+                    message = feePaid + " is added to the fee paid. You have cleared all your dues.";
+                    return message; 
+                }
+                else
+                {
+                    int bal = this.totalFee - this.feePaid;
+                    message = feePaid + " is added to the fee paid. The balance is " + bal;
+                    return message; 
+                }
+            }
+        }
         public int GetCourseFee(string course)
         {
-            int fee;
+            
             if (course == "Java")
             {
-                fee = 5000;
-                return fee;
+                this.totalFee = 5000;
+                return this.totalFee;
             }
             else
             {
                 if (course == "Python")
                 {
-                    fee = 6000;
-                    return fee;
+                    this.totalFee = 6000;
+                    return this.totalFee;
                 }
                 else
                 {
                     if (course == ".Net")
                     {
-                        fee = 8000;
-                        return fee;
+                        this.totalFee = 8000;
+                        return this.totalFee;
                     }
                     else
                         return 0;
@@ -53,7 +77,7 @@ namespace cSharpDemo
 
         static void Main(string[] args)
         {
-            int roll; string name, course;
+            int roll,feePaid; string name, course;
             Console.Write("Please enter the roll #: ");
             roll=Int32.Parse(Console.ReadLine());
             Console.Write("Please enter the name of the student: ");
@@ -66,6 +90,12 @@ namespace cSharpDemo
             Console.WriteLine(); Console.WriteLine();
             Console.Write("The Fee for {0} course to be paid by {1} is :", course, name);
             Console.WriteLine(s1.GetCourseFee(course));
+
+            Console.Write("Entered the amount paid so far: ");
+            feePaid = Int32.Parse(Console.ReadLine());
+
+            Console.WriteLine(s1.Payment(feePaid));
+
         }
     }
 }

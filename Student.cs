@@ -9,7 +9,12 @@ namespace cSharpDemo
     class Student
     {
         private int roll, totalFee, feePaid = 0; private string name, course;
+        static int tax = 18;
 
+        public static void ChangeTax(int t)
+        {
+            tax = t;
+        }
         public Student(int roll, string name)
         {
             this.roll = roll;
@@ -53,6 +58,7 @@ namespace cSharpDemo
             if (course == "Java")
             {
                 this.totalFee = 5000;
+                this.totalFee = this.totalFee+ this.totalFee*tax/100;
                 return this.totalFee;
             }
             else
@@ -60,6 +66,7 @@ namespace cSharpDemo
                 if (course == "Python")
                 {
                     this.totalFee = 6000;
+                    this.totalFee = this.totalFee + this.totalFee * tax / 100;
                     return this.totalFee;
                 }
                 else
@@ -67,6 +74,7 @@ namespace cSharpDemo
                     if (course == ".Net")
                     {
                         this.totalFee = 8000;
+                        this.totalFee = this.totalFee + this.totalFee * tax / 100;
                         return this.totalFee;
                     }
                     else
@@ -87,6 +95,15 @@ namespace cSharpDemo
 
             Student s1 = new Student(roll, name, course);
 
+            Console.Write("Would you like to change the default tax of 18% (True/False)?: ");
+            bool v = bool.Parse(Console.ReadLine());
+            if (v)
+            {
+                Console.Write("Enter the new tax percentage: ");
+                int newTax = Int32.Parse(Console.ReadLine());
+                Student.ChangeTax(newTax);
+                Console.WriteLine("The new Tax amount is now changed to {0}%.", newTax);
+            }
             Console.WriteLine(); Console.WriteLine();
             Console.Write("The Fee for {0} course to be paid by {1} is :", course, name);
             Console.WriteLine(s1.GetCourseFee(course));

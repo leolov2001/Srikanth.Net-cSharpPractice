@@ -52,6 +52,7 @@
     <Compile Include="EvenNumbers.cs" />
     <Compile Include="LeapYear.cs" />
     <Compile Include="LibraryClassesDemo.cs" />
+    <Compile Include="WriteMobileNumbers.cs" />
     <Compile Include="NoOfDays.cs" />
     <Compile Include="Numbers.cs" />
     <Compile Include="PrimeNumber.cs" />

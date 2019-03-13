@@ -66,12 +66,13 @@ namespace cSharpDemo
             {
                 if (v < r)
                 {
-                    Console.WriteLine("You need to aim higher");
+                    if (c != 3) { Console.WriteLine("You need to aim higher"); };
                     return c;
                 }
                 else
                 {
-                    Console.WriteLine("You need to aim lower");
+                    if (c != 3)
+                    { Console.WriteLine("You need to aim lower"); };
                     return c;
                 }
             }
@@ -108,15 +109,15 @@ namespace cSharpDemo
 
             //Ex8.5
             int chance = 1, randomNumber;
-            Console.Write("Please enter a number between (1-10): ");
+            Console.Write("Please enter a number between (1-25): ");
             int inputNumber= Int32.Parse(Console.ReadLine());
             Random r = new Random();
-            randomNumber = r.Next(10);
+            randomNumber = r.Next(25);
             do
             {
                 if (chance > 1)
                 {
-                    Console.Write("Please enter a new number between (1-10): ");
+                    Console.Write("Please enter a new number between (1-25): ");
                     inputNumber = Int32.Parse(Console.ReadLine());
                 }
                 chance = checkGuess(inputNumber, randomNumber, chance);
@@ -125,7 +126,12 @@ namespace cSharpDemo
             } while (chance <= 3);
             if(inputNumber!= randomNumber)
             {
-                Console.WriteLine("I am sorry, you have run out of your tries. Better luck next time!");
+                Console.WriteLine();
+                Console.WriteLine();
+                Console.WriteLine("I am sorry, you have run out of your tries.");
+                Console.WriteLine();
+                Console.WriteLine("The correct number is {0}.", randomNumber);
+                Console.WriteLine("Better luck next time!");
             }
             Console.WriteLine();
             Console.WriteLine();

@@ -35,6 +35,26 @@ namespace cSharpDemo
 
         }
 
+        public static void IsCount(string v)
+        {
+            int count = 0, start = 0;
+            while (v.IndexOf("is", start)!=-1)
+            {
+                count++;
+                start = (v.IndexOf("is", start))+1;
+            }
+
+            if (count > 0)
+            {
+                Console.WriteLine("The string 'is' appears for {0} number of times in the given string.", count);
+            }
+            else
+            {
+                Console.WriteLine("The string 'is' does not appear in the given string.");
+            }
+            
+        }
+
         static void Main(string[] args)
         {
             string vertical;
@@ -53,11 +73,22 @@ namespace cSharpDemo
             //ValidPhoneNumber(vertical);
 
             //Ex8.3
-            Console.Write("Please enter the string of names seperated by ','s: ");
+            //Console.Write("Please enter the string of names seperated by ','s: ");
+            //vertical = Console.ReadLine();
+
+            //SplitNames(vertical);
+
+            //Ex8.4
+            //Console.Write("Please enter the string to check for 'is': ");
+            //vertical = Console.ReadLine();
+
+            //IsCount(vertical);
+
+            //Ex8.5
+            Console.Write("Please enter the string to check for 'is': ");
             vertical = Console.ReadLine();
 
-            SplitNames(vertical);
-
+            IsCount(vertical);
         }
     }
 }

@@ -54,7 +54,7 @@ namespace cSharpDemo
             }
             
         }
-        public static int checkGuess(int v, int r, int c)
+        public static int checkGuess(int v, int r, int c, int l)
         {
             if (v == r)
             {
@@ -64,17 +64,21 @@ namespace cSharpDemo
             }
             else
             {
-                if (v < r)
+                if (l == 1)
                 {
-                    if (c != 3) { Console.WriteLine("You need to aim higher"); };
-                    return c;
+                    if (v < r)
+                    {
+                        if (c != 3) { Console.WriteLine("You need to aim higher"); };
+                        return c;
+                    }
+                    else
+                    {
+                        if (c != 3)
+                        { Console.WriteLine("You need to aim lower"); };
+                        return c;
+                    }
                 }
-                else
-                {
-                    if (c != 3)
-                    { Console.WriteLine("You need to aim lower"); };
-                    return c;
-                }
+                else return c;
             }
         }
 
@@ -108,9 +112,13 @@ namespace cSharpDemo
             //IsCount(vertical);
 
             //Ex8.5
-            int chance = 1, randomNumber;
+            int chance = 1, randomNumber,level=1;
+            Console.Write("Please choose your level to play the guessing game (1 - give hints, 2 - no hints): ");
+            level = Int32.Parse(Console.ReadLine());
+            Console.WriteLine();
+            Console.WriteLine();
             Console.Write("Please enter a number between (1-25): ");
-            int inputNumber= Int32.Parse(Console.ReadLine());
+            int inputNumber = Int32.Parse(Console.ReadLine());
             Random r = new Random();
             randomNumber = r.Next(25);
             do
@@ -120,7 +128,7 @@ namespace cSharpDemo
                     Console.Write("Please enter a new number between (1-25): ");
                     inputNumber = Int32.Parse(Console.ReadLine());
                 }
-                chance = checkGuess(inputNumber, randomNumber, chance);
+                chance = checkGuess(inputNumber, randomNumber, chance, level);
                 chance++;
                 
             } while (chance <= 3);

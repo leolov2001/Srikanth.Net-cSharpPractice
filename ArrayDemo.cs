@@ -14,7 +14,8 @@ namespace cSharpDemo
             {
                 a[i] = Int32.Parse(Console.ReadLine());
             }
-
+            //If you print the array without using 'Foreach' function, it will display the type of array.
+            Console.WriteLine(a);
             //reverse order.
             Console.WriteLine(); Console.WriteLine(); Console.WriteLine();
             Console.Write("The reverse order is: [");

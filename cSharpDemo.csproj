@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>cSharpDemo.ArrayDemo</StartupObject>
+    <StartupObject>cSharpDemo.WordFrequency</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -53,6 +53,8 @@
     <Compile Include="EvenNumbers.cs" />
     <Compile Include="LeapYear.cs" />
     <Compile Include="LibraryClassesDemo.cs" />
+    <Compile Include="SortMobileNumbers.cs" />
+    <Compile Include="WordFrequency.cs" />
     <Compile Include="WriteMobileNumbers.cs" />
     <Compile Include="NoOfDays.cs" />
     <Compile Include="Numbers.cs" />

@@ -1,0 +1,4 @@
+This is to test how to write a program to get word frequency.
+We use a dictionary to store keys and values. Keys are    words and values are counts.
+We use dictionary class in MS.NET.
+   
